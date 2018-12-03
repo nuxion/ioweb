@@ -2,12 +2,13 @@ const app = require('express')();
 const express = require('express');
 const http = require('http').Server(app);
 const cors = require('cors');
+const config = require('./config');
 const io = require('socket.io')(http);
 const bodyParser = require('body-parser');
 const Redis = require('ioredis');
 
-subscriber = new Redis('redis://redis');
-redclient = new Redis('redis://redis');
+subscriber = new Redis(config.redis);
+redclient = new Redis(config.redis);
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
