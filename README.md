@@ -26,7 +26,13 @@ Wich return socket-io client library for dev and production.
 ```
 docker run nuxion/iowebnotif
 ```
-#### ENV values ####
+#### Environment ####
+
+**Workdir**
+
+/usr/src/app
+
+**ENV Variables**
 
 *REDIS_HOST*: ip or fqdn  || 'redis'
 
