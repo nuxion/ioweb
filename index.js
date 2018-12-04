@@ -19,12 +19,18 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/report', function(req, res){
+/*app.post('/report', function(req, res){
     console.log(req.body)
     io.emit('notify', req.body);
     res.send(req.body);
 
-});
+});*/
+
+/**
+ * /notifications
+ * [get] 
+ * Obtiene las notificaciones desde redis. 
+ */
 app.get('/notifications', function(req, res){
     redclient.zrange('users', 0, -1, 'WITHSCORES').then(
         (data) => {
@@ -72,6 +78,6 @@ subscriber.on('message', function(channel, message) {
     //io.emit('notify', {id: timeid, text: message});
     });
 
-http.listen(3000, function(){
+http.listen(config.port, function(){
   console.log('listening on *:3000');
 });
