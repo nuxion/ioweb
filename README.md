@@ -7,7 +7,7 @@ This use redis PUB/SUB to listen notifications from backend and send emit the me
 
 ## Endpoints ##
 
-`notifications/` *Methods [GET]*
+**`notifications/`** *Methods [GET]*
 
 Check with Redis if has any new notification and response a JSON with
 ```
@@ -16,7 +16,9 @@ Check with Redis if has any new notification and response a JSON with
   msg: string -> text
 }
 ```
-`static/` *Methods [GET]*
+
+**`static/`** *Methods [GET]*
+
 Wich return socket-io client library for dev and production.
 
 ## Docker image
@@ -25,10 +27,15 @@ Wich return socket-io client library for dev and production.
 docker run nuxion/iowebnotif
 ```
 #### ENV values ####
-REDIS_HOST: ip or fqdn  || 'redis'
-REDIS_PORT: port || 6379
-PORT: wich express listen || 3000
-ENV: dev is the unique environment right now.
+
+*REDIS_HOST*: ip or fqdn  || 'redis'
+
+*REDIS_PORT*: port || 6379
+
+*PORT*: wich express listen || 3000
+
+*ENV*: dev is the unique environment right now.
+
 
 ## Standalone run ##
 ```
