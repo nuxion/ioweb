@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node lib/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,15 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "ioredis": "^4.2.0",
-    "socket.io": "^2.1.1"
+    "jquery": "^3.3.1",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.27.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
   }
 }

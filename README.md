@@ -49,3 +49,7 @@ npm install
 npm start
 ```
 
+## CHANGELOG ##
+
+- Webpack added
+- jquery, iosocket-client bundled
